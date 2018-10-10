@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="Windows-1252"?>
 <VisualStudioProject
 	ProjectType="Visual C++"
-	Version="9,00"
+	Version="9.00"
 	Name="taekwindow"
 	ProjectGUID="{D123F33E-D34D-4B7C-89C2-A5DC286B90ED}"
 	RootNamespace="taekwindow"

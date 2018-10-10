@@ -19,10 +19,7 @@
 #define IDC_MOUSEGROUP                  1009
 #define IDC_LICENSEGROUP                1010
 #define IDC_ABOUTGROUP                  1011
-#define IDC_LEFTALT                     1011
 #define IDC_APPLOGO                     1012
-#define IDC_ANYALT                      1012
-#define IDC_RIGHTALT                    1013
 #define IDC_MOVELEFT                    1014
 #define IDC_MOVEMIDDLE                  1015
 #define IDC_MOVERIGHT                   1016
@@ -44,6 +41,11 @@
 #define IDC_MOVE                        1034
 #define IDC_RESIZE                      1035
 #define IDC_KEY                         1036
+
+#define IDC_LEFTALT                     1100
+#define IDC_ANYALT                      1101
+#define IDC_RIGHTALT                    1102
+#define IDC_SHIFT_AND_CTRL              1103
 
 // Next default values for new objects
 // 

@@ -72,7 +72,14 @@ bool DragHandler::handleMessage(UINT message, WPARAM wParam, LPARAM lParam) {
 }
 
 bool DragHandler::isModifierDown() const {
-	return (GetAsyncKeyState(globals->config().modifier) & 0x8000) != 0;
+	if (globals->config().modifier == VK_MY_SHIFT_CTRL)
+	{
+		return (GetAsyncKeyState(VK_SHIFT) & 0x8000) != 0 && (GetAsyncKeyState(VK_CONTROL) & 0x8000) != 0;
+	}
+	else
+	{
+		return (GetAsyncKeyState(globals->config().modifier) & 0x8000) != 0;
+	}
 }
 
 void DragHandler::handleDragStart(MouseButton button, POINT const &mousePos) {

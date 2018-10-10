@@ -13,7 +13,7 @@
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
-// English (U.K.) resources
+// âpåÍ (âpçë) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
 #ifdef _WIN32
@@ -123,10 +123,11 @@ STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_CAPTION
 CAPTION "Keys and buttons"
 FONT 8, "MS Shell Dlg", 400, 0, 0x0
 BEGIN
-    GROUPBOX        "Keyboard",IDC_KEYBOARDGROUP,6,6,216,66
-    CONTROL         "&Left Alt",IDC_LEFTALT,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,12,28,204,12
+    CONTROL         "&Left Alt",IDC_LEFTALT,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,12,28,48,12
     CONTROL         "A&ny Alt",IDC_ANYALT,"Button",BS_AUTORADIOBUTTON,12,40,204,12
     CONTROL         "&Right Alt",IDC_RIGHTALT,"Button",BS_AUTORADIOBUTTON,12,52,204,12
+    CONTROL         "Ctrl + Shift",IDC_SHIFT_AND_CTRL,"Button",BS_AUTORADIOBUTTON,71,28,59,12
+    GROUPBOX        "Keyboard",IDC_KEYBOARDGROUP,6,6,216,66
     GROUPBOX        "Mouse",IDC_MOUSEGROUP,6,78,216,84
     CONTROL         "Lef&t mouse button",IDC_MOVELEFT,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,12,100,96,12
     CONTROL         "&Middle mouse button",IDC_MOVEMIDDLE,"Button",BS_AUTORADIOBUTTON,12,112,96,12
@@ -183,7 +184,7 @@ BEGIN
     CONTROL         "License",IDC_LICENSE,"SysLink",WS_TABSTOP,12,162,204,24
 END
 
-#endif    // English (U.K.) resources
+#endif    // âpåÍ (âpçë) resources
 /////////////////////////////////////////////////////////////////////////////
 
 
