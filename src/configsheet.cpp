@@ -206,11 +206,12 @@ BOOL ConfigSheet::generalPageDialogProc(HWND pageHandle, UINT message, WPARAM wP
 BOOL ConfigSheet::buttonsPageDialogProc(HWND pageHandle, UINT message, WPARAM wParam, LPARAM lParam) {
 	switch (message) {
 		case WM_INITDIALOG:
-			CheckRadioButton(pageHandle, IDC_LEFTALT, IDC_SHIFT_AND_CTRL,
+			CheckRadioButton(pageHandle, IDC_LEFTALT, IDC_SHIFT_CTRL_ALT, // todo
 				d_newConfig.modifier == VK_MENU ? IDC_ANYALT :
 				d_newConfig.modifier == VK_RMENU ? IDC_RIGHTALT :
 				d_newConfig.modifier == VK_LMENU ? IDC_LEFTALT :
-				IDC_SHIFT_AND_CTRL
+				d_newConfig.modifier == VK_MY_SHIFT_CTRL ? IDC_SHIFT_CTRL :
+				IDC_SHIFT_CTRL_ALT
 				);
 			CheckRadioButton(pageHandle, IDC_MOVELEFT, IDC_MOVERIGHT,
 				d_newConfig.moveButton == mbMiddle ? IDC_MOVEMIDDLE :
@@ -236,8 +237,8 @@ BOOL ConfigSheet::buttonsPageDialogProc(HWND pageHandle, UINT message, WPARAM wP
 						IsDlgButtonChecked(pageHandle, IDC_ANYALT) ? VK_MENU :
 						IsDlgButtonChecked(pageHandle, IDC_RIGHTALT) ? VK_RMENU :
 						IsDlgButtonChecked(pageHandle, IDC_LEFTALT) ? VK_LMENU :
-						VK_MY_SHIFT_CTRL
-						;
+						IsDlgButtonChecked(pageHandle, IDC_SHIFT_CTRL) ? VK_MY_SHIFT_CTRL :
+						VK_MY_SHIFT_CTRL_ALT;
 					d_newConfig.moveButton =
 						IsDlgButtonChecked(pageHandle, IDC_MOVEMIDDLE) ? mbMiddle :
 						IsDlgButtonChecked(pageHandle, IDC_MOVERIGHT) ? mbRight :

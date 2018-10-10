@@ -76,6 +76,10 @@ bool DragHandler::isModifierDown() const {
 	{
 		return (GetAsyncKeyState(VK_SHIFT) & 0x8000) != 0 && (GetAsyncKeyState(VK_CONTROL) & 0x8000) != 0;
 	}
+	else if (globals->config().modifier == VK_MY_SHIFT_CTRL_ALT)
+	{
+		return (GetAsyncKeyState(VK_SHIFT) & 0x8000) != 0 && (GetAsyncKeyState(VK_CONTROL) & 0x8000) != 0 && (GetAsyncKeyState(VK_MENU) & 0x8000) != 0;
+	}
 	else
 	{
 		return (GetAsyncKeyState(globals->config().modifier) & 0x8000) != 0;
