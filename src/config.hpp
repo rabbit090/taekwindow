@@ -3,8 +3,9 @@
 
 #include "types.hpp"
 
-#define VK_MY_SHIFT_CTRL     0xF0
-#define VK_MY_SHIFT_CTRL_ALT 0xF1
+#define VK_MY_CTRL_SHIFT     0xF0
+#define VK_MY_CTRL_ALT       0xF1
+#define VK_MY_SHIFT_CTRL_ALT 0xF2
 
 struct Configuration {
 

@@ -72,13 +72,17 @@ bool DragHandler::handleMessage(UINT message, WPARAM wParam, LPARAM lParam) {
 }
 
 bool DragHandler::isModifierDown() const {
-	if (globals->config().modifier == VK_MY_SHIFT_CTRL)
+	if (globals->config().modifier == VK_MY_CTRL_SHIFT)
 	{
-		return (GetAsyncKeyState(VK_SHIFT) & 0x8000) != 0 && (GetAsyncKeyState(VK_CONTROL) & 0x8000) != 0;
+		return (GetAsyncKeyState(VK_CONTROL) & 0x8000) != 0 && (GetAsyncKeyState(VK_SHIFT) & 0x8000) != 0 && (GetAsyncKeyState(VK_MENU) & 0x8000) == 0;
+	}
+	else if (globals->config().modifier == VK_MY_CTRL_ALT)
+	{
+		return (GetAsyncKeyState(VK_CONTROL) & 0x8000) != 0 && (GetAsyncKeyState(VK_SHIFT) & 0x8000) == 0 && (GetAsyncKeyState(VK_MENU) & 0x8000) != 0;
 	}
 	else if (globals->config().modifier == VK_MY_SHIFT_CTRL_ALT)
 	{
-		return (GetAsyncKeyState(VK_SHIFT) & 0x8000) != 0 && (GetAsyncKeyState(VK_CONTROL) & 0x8000) != 0 && (GetAsyncKeyState(VK_MENU) & 0x8000) != 0;
+		return (GetAsyncKeyState(VK_CONTROL) & 0x8000) != 0 && (GetAsyncKeyState(VK_SHIFT) & 0x8000) != 0 && (GetAsyncKeyState(VK_MENU) & 0x8000) != 0;
 	}
 	else
 	{

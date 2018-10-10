@@ -46,7 +46,8 @@
 #define IDC_ANYALT                      1101
 #define IDC_RIGHTALT                    1102
 #define IDC_SHIFT_CTRL                  1103
-#define IDC_SHIFT_CTRL_ALT              1104
+#define IDC_CTRL_ALT                    1104
+#define IDC_SHIFT_CTRL_ALT              1105
 
 // Next default values for new objects
 // 
