@@ -2,15 +2,15 @@
 
 <meta>
 
-  <apptitle>Taekwindow R</apptitle>
-  <author>rabbit090</author>
-  <email>rabbit0901234@gmail.com</email>
-  <website>https://github.com/rabbit090/taekwindow</website>
-  <copyright>Copyright © 2006-2009, rabbit090</copyright>
+  <apptitle>Taekwindow (RA Edit)</apptitle>
+  <author>Thomas ten Cate</author>
+  <email>ttencate+taekwindow@gmail.com</email>
+  <website>http://taekwindow.sf.net/</website>
+  <copyright>Copyright © 2006-2009, Thomas ten Cate</copyright>
   <licensebrief>This program is licensed under the BSD license. This means you are free and welcome to distribute it.</licensebrief>
 
-  <filebasename>taekwindow R</filebasename>
-  <mainexefile>taekwindow R</mainexefile>
+  <filebasename>taekwindow</filebasename>
+  <mainexefile>taekwindow</mainexefile>
   <readmefile>readme.html</readmefile>
 
 </meta>
